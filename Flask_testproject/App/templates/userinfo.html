@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+    <h3>欢迎{{ user.name }}回家</h3><br/>
+    <h3>头像：<img src="{{ pic_path }}" width="50" height="50"/></h3><br/>
+    <a href="{{ url_for('first.to_news') }}">返回</a><a href="{{ url_for('first.update') }}"><h3>修改</h3></a><br/>
+
+</body>
+</html>

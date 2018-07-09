@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <div align="center">
+        <form action="{{ url_for('first.login') }}" method="post">
+            <p>用户名：<input type="text" name="name"/></p>
+            <p>密码：<input type="text" name="pwd"/></p>
+            <p><input type="submit" value="登录"/>
+            <a href="{{ url_for('first.register') }}">注册</a></p>
+        </form>
+    </div>
+</body>
+</html>
