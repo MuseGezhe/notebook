@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}地址{% endblock title %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'mine/css/update.css' %}">
+{% endblock link %}
+{% block script %}
+<script type="application/javascript" src="{% static 'mine/js/update.js' %}"></script>
+{% endblock script %}
+{% block main %}
+<div id="updatediv">
+    <form action="/update/" method="post" id="updatediv">
+        {% csrf_token %}
+
+        联系人  <input type="text" name="person" value=""><br/>
+               <input type="radio" name="sex"  value="True">先生
+               <input type="radio" name="sex" value="False">女士<br/>
+        手机号码<input type="text" name="phonecode"><br/>
+        所在城市<input type="text" name="city"><br/>
+        所在地区<input type="text" name="county"><br/>
+        详细地址<input type="text" name="rowd">
+        <button id="update" type="submit" >保存</button><br/>
+
+    </form>
+</div>
+
+{% endblock main %}

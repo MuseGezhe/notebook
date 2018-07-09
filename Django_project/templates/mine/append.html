@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}添加{% endblock title %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'mine/css/append.css' %}">
+{% endblock link %}
+{% block script %}
+<script type="application/javascript" src="{% static 'mine/js/append.js' %}"></script>
+{% endblock script %}
+{% block main %}
+    <form action="/append/" method="post" id="div2">
+        {% csrf_token %}
+        <a href="/address/"><</a>添加地址
+        <input type="submit" name="保存"><br/>
+        联系人  <input type="text" name="person" value=""><br/>
+               <input type="radio" name="sex"  value="True">先生
+               <input type="radio" name="sex" value="False">女士<br/>
+        手机号码<input type="text" name="phonecode"><br/>
+        所在城市<input type="text" name="city"><br/>
+        所在地区<input type="text" name="county"><br/>
+        详细地址<input type="text" name="rowd">
+    </form>
+{% endblock main %}

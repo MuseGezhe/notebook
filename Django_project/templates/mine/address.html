@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}地址{% endblock title %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'mine/css/address.css' %}">
+{% endblock link %}
+{% block script %}
+<script type="application/javascript" src="{% static 'mine/js/address.js' %}"></script>
+{% endblock script %}
+{% block main %}
+    <div id="div1">
+        <div >
+            <a href="/mine/">&lt;</a>             我的地址
+        </div>
+        <div >
+            {% for item in infos %}
+                <li>{{ item.name }}{{ item.phoneNum }}{{ item.city }}{{ item.street }}<a href="/update/">修改</a></li>
+
+            {% endfor %}
+            <a href="/append/">新增地址</a>
+        </div>
+    </div>
+{% endblock main %}
