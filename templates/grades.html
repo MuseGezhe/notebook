@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级信息</title>
+</head>
+<body>
+    <h1>班级信息</h1>
+    <ul>
+        {% for grade in grades %}
+        <a href="http://127.0.0.1:8000/students/grade/{{grade.id}}/"><li>{{grade.name}}</li></a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
